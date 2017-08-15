@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <zhu-lei name="zhulei"></zhu-lei>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/etpl/3-2-0/etpl.js"></script>
+    <script src="../src/fusion.core.js"></script>
+    <script src="../src/fusion.best.js"></script>
+    <script>
+        register('zhu-lei', {
+            props: {
+                name: {
+                    type: String,
+                    value: 'aladdin',
+                    onChange: function (old, now) {
+                        alert(old + ' ' + now);
+                    }
+                }
+            },
+            tpl: '<p>hello world! ${name}!</p>',
+            css: 'zhu-lei p {color: red;}',
+            created: function () {
+                console.log('create');
+            },
+            init: function () {
+                console.log('init');
+            },
+            attached: function () {
+                console.log('attach');
+            },
+            detached: function () {
+                console.log('detach');
+            }
+        });
+
+        var zl = document.querySelector('zhu-lei');
+        var body = document.body;
+        body.removeChild(zl);
+        body.appendChild(zl);
+    </script>
+</body>
+</html>

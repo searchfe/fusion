@@ -1,0 +1,39 @@
+{
+  "name": "fusion",
+  "version": "0.0.1",
+  "description": "awesome front-end component framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "test-coverage": "karma start --reporters mocha,coverage",
+    "test-html": "karma start --reporters mocha,html",
+    "test-reports": "karma start --reporters mocha,html,coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:searchfe/fusion.git"
+  },
+  "keywords": [
+    "component",
+    "custom-element",
+    "fusion"
+  ],
+  "author": "zhulei05",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "karma": "^1.2.0",
+    "karma-chai": "^0.1.0",
+    "karma-chai-sinon": "^0.1.5",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.1.1",
+    "karma-html-reporter": "^0.2.7",
+    "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.0.4",
+    "mocha": "^3.0.2",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "sinon": "^1.17.5"
+  }
+}

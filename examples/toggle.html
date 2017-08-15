@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>Toggle</title>
+    <style>
+        .b-toggle-layer1 div {
+            height: 200px;
+            background: #e08a26;
+            font-size: 80px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .box2, .box3 {
+            margin-top: 10px;
+        }
+        .btn {
+            margin-top: 10px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #999;
+            text-align: center;
+        }
+        .b-toggle-default-hide {
+            display: none;
+        }
+        .result {
+            height: 300px;
+            background: white;
+            font-size: 80px;
+            text-align: center;
+            line-height: 300px;
+            border: 1px solid #333;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <b-toggle fullHeight="620">
+            <div class="b-toggle-layer1">
+                <div class="box1">1</div>
+                <div class="b-toggle-default-hide box2">2</div>
+                <div class="b-toggle-default-hide box3">3</div>
+            </div>
+            <div class="b-toggle-layer2 btn">展开</div>
+        </b-toggle>
+    </div>
+    <div class="result">result1</div>
+    <div class="result">result2</div>
+    <div class="result">result3</div>
+    <div class="result">result4</div>
+    <script src="http://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-4/esl.js"></script>
+    <script src="./esl_config.js"></script>
+    <script>
+        $(document).ready(function () {
+            alert(navigator.userAgent);
+            require(['components/toggle']);
+        });
+    </script>
+</body>
+</html>

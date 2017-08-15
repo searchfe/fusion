@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <zhu-lei name="zhulei"></zhu-lei>
+    <zhu-lei name="joeray"></zhu-lei>
+    <zhu-lei2 name="zhulei"></zhu-lei2>
+    <zhu-lei2 name="joeray"></zhu-lei2>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/etpl/3-2-0/etpl.js"></script>
+    <script src="../src/fusion.core.js"></script>
+    <script src="../src/fusion.best.js"></script>
+    <script>
+        register('zhu-lei', {
+            props: {
+                name: {
+                    type: String,
+                    value: 'aladdin',
+                    onChange: function (old, now) {
+                        console.log(old, now);
+                    }
+                }
+            },
+            tpl: '<p>hello world! ${name}!</p>',
+            css: 'zhu-lei p {color: red;}',
+        });
+        register('zhu-lei2', {
+            props: {
+                name: {
+                    type: String,
+                    value: 'aladdin',
+                    onChange: function (old, now) {
+                        console.log(old, now);
+                    }
+                }
+            },
+            tpl: '<p>hello world! ${name}!</p>',
+            css: 'zhu-lei2 p {color: red;}',
+        });
+    </script>
+</body>
+</html>

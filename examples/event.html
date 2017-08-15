@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <zhu-lei name="zhulei"></zhu-lei>
+    <script src="http://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/etpl/3-2-0/etpl.js"></script>
+    <script src="../src/fusion.core.js"></script>
+    <script src="../src/fusion.best.js"></script>
+    <script>
+        register('zhu-lei', {
+            props: {
+                name: {
+                    type: String,
+                    value: 'aladdin',
+                    onChange: function (old, now) {
+                        console.log(old, now);
+                    }
+                }
+            },
+            tpl: '<p>hello world! ${name}!</p>',
+            css: 'zhu-lei p {color: red;}',
+            attach: function () {
+                var that = this;
+                setTimeout(function () {
+                    that.trigger('alert', 'alert data');
+                }, 2000);
+            }
+        });
+
+        /*document.querySelector('zhu-lei').fusion.on('alert', function (evt, data) {
+            alert(data);
+        });*/
+        $('zhu-lei').on('alert', function (evt, data) {
+            alert(data);
+        });
+    </script>
+</body>
+</html>
